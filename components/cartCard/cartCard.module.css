@@ -1,0 +1,68 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+    margin: 2rem 0rem;
+    width: 220px;
+}
+
+.image {
+    width: 60px;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.quantityBlock {
+    margin-top: 10px;
+    display: flex;
+}
+
+.operation {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.price {
+    font-size: 14px;
+}
+
+.quantity {
+    font-size: 12px;
+    color: grey;
+}
+
+.value {
+    font-size: 12px;
+}
+
+.auxiliarWidth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+}
+
+.symbol:hover {
+    cursor: pointer;
+}

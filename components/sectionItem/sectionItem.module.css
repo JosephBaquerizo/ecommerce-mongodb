@@ -1,0 +1,56 @@
+.container {
+    position: relative;
+    max-width: 200px;
+    width: 100%;
+}
+
+.titleContainer {
+    position: absolute;
+    left: calc(50% - 50px);
+    transform: translateY(50%);
+    bottom: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    padding: 5px;
+    border: 2px solid white;
+    z-index: 3;
+}
+
+.titleContainer span {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+}
+
+.container img {
+    width: 100%;
+}
+
+.hiddenContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.hiddenContent:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 280px) {
+    .titleContainer {
+        width: 60px;
+        padding: 3px;
+        left: calc(50% - 30px);
+    }
+
+    .titleContainer span {
+        font-size: 12px;
+    }
+}

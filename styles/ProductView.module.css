@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+  }
+  
+.main {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+}
+
+.main img {
+    max-width: 220px;
+    width: 100%;
+}
+
+.centralContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 220px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 20px;
+}
+
+.price {
+    color: rgb(83, 83, 83);
+    margin-bottom: 20px;
+}
+
+.addRemoveContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.auxiliarWidth {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+}
+
+.infoContainer button {
+    padding: 5px;
+    color: white;
+    background-color: rgb(0, 95, 238);
+    border: none;
+}
+
+.infoContainer button:hover {
+    background-color: rgb(30, 120, 255);
+    cursor: pointer;
+}
+
+.operation:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 599px) {
+    .centralContainer {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .qty {
+        font-size: 14px;
+    }
+}

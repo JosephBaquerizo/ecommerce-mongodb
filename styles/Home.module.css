@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  margin-top: 30px;
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.title span {
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 0;
+  margin: 0;
+}
+
+.topProfile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topProfile button {
+  height: 30px;
+}
+
+.topProfile button:hover {
+  cursor: pointer;
+}
+
+.topProfile {
+  font-size: 24px;
+}
+
+.nickname {
+  font-weight: 500;
+}
+
+.orderSection {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.columnsTitleContainer {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.block25 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+.orderContainer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid grey;
+  padding: 10px 0px;
+}
+
+.order {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgb(207, 207, 207);;
+}
+
+.order button {
+  padding: 5px 10px;
+}
+
+.order button:hover {
+  cursor: pointer;
+}
+
+.blockImage {
+  width: 100px;
+}
+
+.itemName {
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 599px) {
+  .title span {
+    font-size: 16px;
+  }
+}

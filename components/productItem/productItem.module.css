@@ -1,0 +1,65 @@
+.container {
+    max-width: 200px;
+    width: 100%;
+}
+
+.container img {
+    width: 100%;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.infoContainer span {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.imageContainer {
+    position: relative;
+}
+
+.hiddenContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 99%;
+    width: 100%;
+    z-index: 2;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hiddenContent button {
+    display: none;
+    width: 125px;
+    border: 2px solid white;
+    padding: 5px;
+    font-weight: 500;
+    border: none;
+}
+
+.hiddenContent:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hiddenContent:hover button {
+    display: block;
+}
+
+.hiddenContent button:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 280px) {
+    .infoContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
