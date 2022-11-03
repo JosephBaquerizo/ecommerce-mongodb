@@ -31,6 +31,7 @@ export default function Home({ sections }) {
 export async function getServerSideProps() {
   try {
 
+    //const sendDate = (new Date()).getTime();
     await conectarDB();
     
     const res = await Section.find({});
@@ -40,6 +41,10 @@ export async function getServerSideProps() {
       section._id = `${section._id}`;
       return section;
     })
+
+    //const receiveDate = (new Date()).getTime();
+
+    //console.log(receiveDate - sendDate);
 
     return { props: { sections }}
 
