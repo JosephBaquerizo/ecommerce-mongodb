@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+  
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 70%;
+  margin-bottom: 50px;
+}
+  
+.canceledContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+.canceledContainer button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 5px;
+  color: white;
+  background-color: rgb(0, 95, 238);
+  border: none;
+}
+
+.canceledContainer button:hover {
+  background-color: rgb(30, 120, 255);
+  cursor: pointer;
+}

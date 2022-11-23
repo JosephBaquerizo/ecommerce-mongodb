@@ -1,7 +1,9 @@
 .container {
     position: relative;
     max-width: 200px;
-    width: 100%;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(177, 177, 177);
 }
 
 .titleContainer {
@@ -23,10 +25,6 @@
     font-weight: 700;
     color: white;
     text-transform: uppercase;
-}
-
-.container img {
-    width: 100%;
 }
 
 .hiddenContent {

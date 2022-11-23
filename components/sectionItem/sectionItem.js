@@ -1,5 +1,11 @@
 import styles from './sectionItem.module.css';
+import Image from 'next/image';
 import Link from 'next/link';
+
+const imageStyle = {
+    height: "auto",
+    width: "50px"
+}
 
 export default function SectionItem({ info }) {
 
@@ -13,7 +19,13 @@ export default function SectionItem({ info }) {
                 <div className={styles.titleContainer}>
                     <span>{name}</span>
                 </div>
-                <img src={imageURL}/>
+                <Image
+                    fill
+                    alt=""
+                    src={imageURL} 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority
+                />
             </div>
         </Link>
     )

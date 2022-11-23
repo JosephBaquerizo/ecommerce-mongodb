@@ -3,10 +3,6 @@
     width: 100%;
 }
 
-.container img {
-    width: 100%;
-}
-
 .infoContainer {
     display: flex;
     justify-content: space-between;
@@ -20,13 +16,16 @@
 
 .imageContainer {
     position: relative;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(177, 177, 177);
 }
 
 .hiddenContent {
     position: absolute;
     top: 0;
     left: 0;
-    height: 99%;
+    height: 100%;
     width: 100%;
     z-index: 2;
     padding: 20px 0px;

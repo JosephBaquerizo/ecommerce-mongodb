@@ -59,13 +59,14 @@
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: rgb(77, 77, 77);
 }
 
 .block25 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 50%;
 }
 
 .orderContainer {
@@ -79,7 +80,7 @@
   display: flex;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid rgb(207, 207, 207);;
+  border-bottom: 1px solid rgb(207, 207, 207);
 }
 
 .order button {
@@ -98,8 +99,49 @@
   text-transform: capitalize;
 }
 
+.responsiveParameter {
+  display: none;
+  color: rgb(77, 77, 77);
+}
+
+@media screen and (max-width: 1000px) {
+  .columnsTitleContainer {
+    display: none;
+  }
+
+  .responsiveParameter {
+    display: block;
+  }
+
+  .block25 {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .order {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .title span {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .order span {
+    font-size: 12px;
+  }
+
+  .topProfile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topProfile button {
+    margin-top: 20px;
   }
 }

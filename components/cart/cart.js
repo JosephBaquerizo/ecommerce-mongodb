@@ -8,6 +8,7 @@ import { getUserId } from '../../lib/helpers';
 import toast from 'react-hot-toast';
 import { useState } from 'react';
 const { motion } = require('framer-motion');
+import getStripe from '../../lib/getStripe';
 
 
 // Animation variants
@@ -35,6 +36,18 @@ export default function Cart() {
 
     const hideCart = () => {
         dispatch(cartActions.setCart(false));
+    }
+
+    const handleCheckout = async() => {
+        setLoading(true);
+        const stripe = await getStripe();
+        const response = await fetch('/api/stripe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify(items)
+        });
+        const data = await response.json();
+        await stripe.redirectToCheckout({ sessionId: data.id });
     }
 
     const purchase = async () => {
@@ -127,7 +140,7 @@ export default function Cart() {
                             <span>Total:</span>
                             <span>${totalPrice}</span>
                         </div>
-                        <button onClick={purchase}>{ loading ? 'Processing...' : 'PURCHASE'}</button>
+                        <button onClick={handleCheckout}>{ loading ? 'Processing...' : 'PURCHASE'}</button>
                     </div>
                 }
             </motion.div>

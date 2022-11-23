@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { MdOutlineRemoveCircle, MdOutlineAddCircle } from 'react-icons/md';
 import toast from 'react-hot-toast';
+import Image from 'next/image';
 
 export default function ProductView({ success, error, product }) {
 
@@ -51,7 +52,14 @@ export default function ProductView({ success, error, product }) {
         <div className={styles.container}>
             <main className={styles.main}>
                 <div className={styles.centralContainer}>
-                    <img src={imageURL}/>
+                    <div className={styles.image}>
+                        <Image 
+                            fill
+                            alt={name} 
+                            src={imageURL}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                        />
+                    </div>
                     <div className={styles.infoContainer}>
                         <span className={styles.title}>{name}</span>
                         <span className={styles.description}>{description}</span>

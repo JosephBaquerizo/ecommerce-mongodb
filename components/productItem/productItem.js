@@ -1,6 +1,7 @@
 import styles from './productItem.module.css';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function ProductItem({ info }) {
 
@@ -36,7 +37,12 @@ export default function ProductItem({ info }) {
                 <div className={styles.hiddenContent}>
                     <button onClick={pushToProductView}>QUICK VIEW</button>
                 </div>
-                <img src={imageURL} />
+                <Image 
+                    fill 
+                    alt=""
+                    src={imageURL} 
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
             </div>
             <div className={styles.infoContainer}>
                 <span className={styles.name}>{name}</span>

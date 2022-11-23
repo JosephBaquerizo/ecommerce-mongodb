@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.widthContainer {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}
+
+.widthParameterContainer {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.columnItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.itemName {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.parameter {
+    display: none;
+    color: rgb(77, 77, 77);
+}
+
+@media screen and (max-width: 520px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .widthContainer {
+        align-items: center;
+    }
+
+    .widthParameterContainer {
+        display: flex;
+    }
+
+    .parameter {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .columnItem {
+        flex-direction: column;
+    }
+}

@@ -16,6 +16,13 @@
     width: 100%;
 }
 
+.image {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    background-color: rgb(177, 177, 177);
+}
+
 .centralContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
